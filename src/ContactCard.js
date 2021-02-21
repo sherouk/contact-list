@@ -1,14 +1,21 @@
-import './styles.css'
-import ContactCard from './ContactCard'
-const App = () => {
+import { useState } from "react"
+
+const ContactCard = props => {
+  //console.log(props.avatar)
+  //console.log(props.name)
+  //console.log(props.email)
+  //console.log(props.age)
+
   const contacts = [
     { name: 'Mr. Bubble', email: 'mrbubbles@email.com', age: 43 },
     { name: 'Mrs. Suds', email: 'mrssuds@email.com', age: 47 },
     { name: 'Little Soapy', email: 'lilsoapy@email.com', age: 13 }
-  ]  
+  ]
+
+  const [showAge, setShowAge] = useState(false)
   
   return (
-  <div className="container">
+    <>
     {contacts.map(contact => (
       <ContactCard
         avatar="https://via.placeholder.com/150"
@@ -17,8 +24,8 @@ const App = () => {
         age={contact.age}
       />
     ))}
-  </div>
+  </>
   )
 }
 
-export default App
+export default ContactCard
