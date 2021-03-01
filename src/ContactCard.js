@@ -1,10 +1,10 @@
-import { useState } from "react"
+import { useState } from 'react'
 
 const ContactCard = props => {
-  //console.log(props.avatar)
-  //console.log(props.name)
-  //console.log(props.email)
-  //console.log(props.age)
+  // console.log(props.avatar)
+  // console.log(props.name)
+  // console.log(props.email)
+  // console.log(props.age)
 
   const contacts = [
     { name: 'Mr. Bubble', email: 'mrbubbles@email.com', age: 43 },
@@ -13,18 +13,18 @@ const ContactCard = props => {
   ]
 
   const [showAge, setShowAge] = useState(false)
-  
+
   return (
     <>
-    {contacts.map(contact => (
-      <ContactCard
-        avatar="https://via.placeholder.com/150"
-        name={contact.name}
-        email={contact.email}
-        age={contact.age}
-      />
-    ))}
-  </>
+      {contacts.map(contact => (
+        <ContactCard
+          avatar='https://via.placeholder.com/150'
+          name={contact.name}
+          email={contact.email}
+          age={contact.age}
+        />
+      ))}
+    </>
   )
 }
 
